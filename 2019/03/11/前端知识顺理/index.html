@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="54runoob’ blog">
 <meta property="og:description" content="1.事件冒泡是怎么样的？事件冒泡就是，事件会从目前元素往根元素（从里到外）进行传递2.跨域的方式？  由于浏览器同源策略，所以就有了跨域的问题，浏览器是从两个方面去做这个同源策略的，一是&amp;gt; 针对接口的请求，二是针对Dom的查询。  针对接口的请求的跨域方式 jsonp,利用script标签的src可跨域的特性（但只限制get方式） 空iframe + from（支持post方式） CORS">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-12T10:59:01.265Z">
+<meta property="og:updated_time" content="2019-03-12T16:26:29.057Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识顺理">
 <meta name="twitter:description" content="1.事件冒泡是怎么样的？事件冒泡就是，事件会从目前元素往根元素（从里到外）进行传递2.跨域的方式？  由于浏览器同源策略，所以就有了跨域的问题，浏览器是从两个方面去做这个同源策略的，一是&amp;gt; 针对接口的请求，二是针对Dom的查询。  针对接口的请求的跨域方式 jsonp,利用script标签的src可跨域的特性（但只限制get方式） 空iframe + from（支持post方式） CORS">
@@ -149,7 +149,9 @@
 </ul>
 <p>12.get和post的区别？<br>  GET请求在URL中传送的参数是有长度限制的，而POST没有。<br>  GET比POST更不安全，因为参数直接暴露在URL上，所以不能用来传递敏感信息。<br>  GET参数通过URL传递，POST放在Request body中。<br>  GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留。<br>  GET请求只能进行url编码，而POST支持多种编码方式。<br>  GET请求会被浏览器主动cache，而POST不会，除非手动设置。<br>  GET产生的URL地址可以被Bookmark，而POST不可以。<br>  GET在浏览器回退时是无害的，而POST会再次提交请求。</p>
 <p>  get和post其实是HTTP协议中的两种发送请求的方法，而HTTP是基于TCP/IP的关于数据如何在万维网中如何通信的协议。HTTP的底层是TCP/IP。所以GET和POST的底层也是TCP/IP，也就是说，GET/POST都是TCP链接。GET和POST能做的事情是一样一样的。你要给GET加上request body，给POST带上url参数，技术上是完全行的通的。但是由于HTTP的规定和浏览器/服务器的限制，导致他们在应用过程中体现出一些不同。</p>
-<p>  GET和POST还有一个重大区别，简单的说：<br>  GET产生一个TCP数据包；POST产生两个TCP数据包。<br>  长的说：<br>  对于GET方式的请求，浏览器会把http header和data一并发送出去，服务器响应200（返回数据）；<br>  而对于POST，浏览器先发送header，服务器响应100 continue，浏览器再发送data，服务器响应200 ok（返回数据）。<br>13.http1和http2的区别？<br>参考地址：<a href="https://www.cnblogs.com/zhangyfr/p/8662673.html">https://www.cnblogs.com/zhangyfr/p/8662673.html</a><br>14.https的了解？<br>15.性能优化的措施？<br>16.混合app的原理？<br>17.对nginx的了解？<br>18.对缓存的了解？强缓存和协议缓存？<br>19.自己的优势？<br>20.自己的缺点？</p>
+<p>  GET和POST还有一个重大区别，简单的说：<br>  GET产生一个TCP数据包；POST产生两个TCP数据包。<br>  长的说：<br>  对于GET方式的请求，浏览器会把http header和data一并发送出去，服务器响应200（返回数据）；<br>  而对于POST，浏览器先发送header，服务器响应100 continue，浏览器再发送data，服务器响应200 ok（返回数据）。<br>13.http1和http2的区别？<br>参考地址：<a href="https://www.cnblogs.com/zhangyfr/p/8662673.html">https://www.cnblogs.com/zhangyfr/p/8662673.html</a></p>
+<p>14.https的了解？<br>HTTPS协议需要到CA申请证书，一般免费证书很少，需要交费。<br>HTTP协议运行在TCP之上，所有传输的内容都是明文，HTTPS运行在SSL/TLS之上，SSL/TLS运行在TCP之上，所有传输的内容都经过加密的。<br>HTTP和HTTPS使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。<br>HTTPS可以有效的防止运营商劫持，解决了防劫持的一个大问题。</p>
+<p>15.性能优化的措施？<br>16.混合app的原理？<br>17.对nginx的了解？<br>18.对缓存的了解？强缓存和协议缓存？<br>19.自己的优势？<br>20.自己的缺点？</p>
 <a id="more"></a>
 <p>1.行内元素和块状元素的区别？<br>2.position有哪些值，分别由什么用和区别？<br>3.行内元素，块元素的标签有哪些？<br>4.对css比较熟悉还是js？<br>5.双飞翼布局方案？<br>6.flex布局想优先加载主体块（html结构主体块提前），css样式要怎么处理？（利用flex的order属性）<br>7.跨域的方式？<br>8.对小程序的了解？<br>9.vue的生命周期钩子函数有哪些和分别做了什么？<br>10.项目中遇到了哪些难题，是怎么解决的？<br>11.自适应方案的原理？<br>12.混合app， webapp跟原生app是怎么通讯的？<br>13.vue组件间怎么通讯？<br>14.vuex的action可以是同步的也可以是异步的，muations只能是同步的，为什么？</p>
 <p>1.html5和css3的新特性？<br>2.css盒模型是什么，margin和padding的区别？<br>3.举例浏览器兼容性问题及解决方案，css hack方案？<br>4.cookie，localstorage，session的区别？<br>5.原生js实现trim函数？<br>6.垂直居中布局？<br>7.原生js实现节点的增，删，移动？<br>8.查找字符串出现次数最多的字符，并统计次数，js实现？<br>9.typeof 返回的数据类型？<br>10.怎么知道请求是否成功？<br>11.对vue的看法，为什么使用vue？<br>12.虚拟dom的优势？<br>13.对会话的理解？<br>14.cokkie的了解？<br>15.多个请求是怎么处理的？<br>16.http状态码？<br>17.webpack的作用？</p>
@@ -187,7 +189,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/11/前端知识顺理/" data-id="cjt5zfoti00012ghqfjf5dgm8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/11/前端知识顺理/" data-id="cjt5zn42a0002schqtnjrykku" class="article-share-link">Share</a>
       
       
     </footer>

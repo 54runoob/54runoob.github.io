@@ -147,7 +147,9 @@
 </ul>
 <p>12.get和post的区别？<br>  GET请求在URL中传送的参数是有长度限制的，而POST没有。<br>  GET比POST更不安全，因为参数直接暴露在URL上，所以不能用来传递敏感信息。<br>  GET参数通过URL传递，POST放在Request body中。<br>  GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留。<br>  GET请求只能进行url编码，而POST支持多种编码方式。<br>  GET请求会被浏览器主动cache，而POST不会，除非手动设置。<br>  GET产生的URL地址可以被Bookmark，而POST不可以。<br>  GET在浏览器回退时是无害的，而POST会再次提交请求。</p>
 <p>  get和post其实是HTTP协议中的两种发送请求的方法，而HTTP是基于TCP/IP的关于数据如何在万维网中如何通信的协议。HTTP的底层是TCP/IP。所以GET和POST的底层也是TCP/IP，也就是说，GET/POST都是TCP链接。GET和POST能做的事情是一样一样的。你要给GET加上request body，给POST带上url参数，技术上是完全行的通的。但是由于HTTP的规定和浏览器/服务器的限制，导致他们在应用过程中体现出一些不同。</p>
-<p>  GET和POST还有一个重大区别，简单的说：<br>  GET产生一个TCP数据包；POST产生两个TCP数据包。<br>  长的说：<br>  对于GET方式的请求，浏览器会把http header和data一并发送出去，服务器响应200（返回数据）；<br>  而对于POST，浏览器先发送header，服务器响应100 continue，浏览器再发送data，服务器响应200 ok（返回数据）。<br>13.http1和http2的区别？<br>参考地址：<a href="https://www.cnblogs.com/zhangyfr/p/8662673.html">https://www.cnblogs.com/zhangyfr/p/8662673.html</a><br>14.https的了解？<br>15.性能优化的措施？<br>16.混合app的原理？<br>17.对nginx的了解？<br>18.对缓存的了解？强缓存和协议缓存？<br>19.自己的优势？<br>20.自己的缺点？</p>
+<p>  GET和POST还有一个重大区别，简单的说：<br>  GET产生一个TCP数据包；POST产生两个TCP数据包。<br>  长的说：<br>  对于GET方式的请求，浏览器会把http header和data一并发送出去，服务器响应200（返回数据）；<br>  而对于POST，浏览器先发送header，服务器响应100 continue，浏览器再发送data，服务器响应200 ok（返回数据）。<br>13.http1和http2的区别？<br>参考地址：<a href="https://www.cnblogs.com/zhangyfr/p/8662673.html">https://www.cnblogs.com/zhangyfr/p/8662673.html</a></p>
+<p>14.https的了解？<br>HTTPS协议需要到CA申请证书，一般免费证书很少，需要交费。<br>HTTP协议运行在TCP之上，所有传输的内容都是明文，HTTPS运行在SSL/TLS之上，SSL/TLS运行在TCP之上，所有传输的内容都经过加密的。<br>HTTP和HTTPS使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。<br>HTTPS可以有效的防止运营商劫持，解决了防劫持的一个大问题。</p>
+<p>15.性能优化的措施？<br>16.混合app的原理？<br>17.对nginx的了解？<br>18.对缓存的了解？强缓存和协议缓存？<br>19.自己的优势？<br>20.自己的缺点？</p>
         
           <p class="article-more-link">
             <a href="/2019/03/11/前端知识顺理/#more">阅读更多</a>
@@ -156,7 +158,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/11/前端知识顺理/" data-id="cjt5zfoti00012ghqfjf5dgm8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/11/前端知识顺理/" data-id="cjt5zn42a0002schqtnjrykku" class="article-share-link">Share</a>
       
       
     </footer>
@@ -201,7 +203,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/11/hello-world/" data-id="cjt5zfoty00022ghqd8boz9wr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/11/hello-world/" data-id="cjt5zn41l0001schqqjopeex1" class="article-share-link">Share</a>
       
       
     </footer>
