@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="54runoob’ blog">
 <meta property="og:description" content="1.事件冒泡是怎么样的？事件冒泡就是，事件会从目前元素往根元素（从里到外）进行传递2.跨域的方式？ 由于浏览器同源策略，所以就有了跨域的问题，浏览器是从两个方面去做这个同源策略的，一是针对接口的请求，二是针对Dom的查询。 针对接口的请求的跨域方式 jsonp,利用script标签的src可跨域的特性（但只限制get方式） 空iframe + from（支持post方式） CORS （跨域资源共享">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-17T11:25:00.332Z">
+<meta property="og:updated_time" content="2019-03-18T16:39:02.788Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识顺理">
 <meta name="twitter:description" content="1.事件冒泡是怎么样的？事件冒泡就是，事件会从目前元素往根元素（从里到外）进行传递2.跨域的方式？ 由于浏览器同源策略，所以就有了跨域的问题，浏览器是从两个方面去做这个同源策略的，一是针对接口的请求，二是针对Dom的查询。 针对接口的请求的跨域方式 jsonp,利用script标签的src可跨域的特性（但只限制get方式） 空iframe + from（支持post方式） CORS （跨域资源共享">
@@ -46,9 +46,7 @@
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
         
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
+          <a class="main-nav-link" href="/">首页</a>
         
       </nav>
       <nav id="sub-nav">
@@ -176,11 +174,22 @@
 <p>CommonJS是服务器端js模块化的规范，NodeJS是这种规范的实现。</p>
 <p>AMD(异步模块定义)和CMD(通用模块定义)都是浏览器端js模块化的规范。RequireJS 遵循的是 AMD，SeaJS 遵循的是 CMD。</p>
 <p>参考：<a href="https://www.cnblogs.com/lishuxue/p/6000205.html" target="_blank" rel="noopener">https://www.cnblogs.com/lishuxue/p/6000205.html</a></p>
+<p>1.Xhtml和html的区别？<br>2.doctype的作用？标准模式和兼容模式的区别？<br>3.js实现对一个数组乱序处理？<br>4.统计一个字符串每个字符出现的次数，统计最多的是哪个字符？<br>5.ajax请求中get和post的区别？<br>6.ajax请求的json数据怎么解析？<br>7.for , for in , for of的区别？(参考：<a href="https://blog.csdn.net/qq_36470686/article/details/82936378" target="_blank" rel="noopener">https://blog.csdn.net/qq_36470686/article/details/82936378</a>)<br>for表达式一般如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(表达式1;表达式2;表达式3)&#123;</span><br><span class="line">    表达式4;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>执行的顺序为：<br>1）第一次循环，即初始化循环。<br>首先执行表达式1（一般为初始化语句），再执行表达式2（一般为条件判断语句）。如果符合，则执行表达式4，最后执行表达式3。否则，停止执行。</p>
+<p>2）下次的循环：<br>首先执行表达式2，判断是否符合表达式2的条件；如果符合，继续执行表达式4，最后执行表达式3。否则停止执行。</p>
+<p>for in<br>表达式一般如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(a in 对象)&#123;</span><br><span class="line">   表达式1；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>此处的a是对象中的key(键名)。</p>
+<p>一般用于遍历对象的可枚举属性。以及对象从构造函数原型中继承的属性。对于每个不同的属性，语句都会被执行(因为是key，所以直接得到的是属性名)<br>当使用for in遍历数组时，和遍历对象的行为一样，会遍历数组所有可枚举的属性，所以原型对象上的方法和属性也会被遍历（数组遍历直接得到的是索引，属性直接遍历得到的是属性名）<br>遍历的顺序可能不是按照实际数组的内部顺序<br>如果迭代的对象的变量值是null或者undefined, for in不执行循环体，建议在使用for in循环之前，先检查该对象的值是不是null或者undefined<br>注意：遍历得到的Key都是String类型，不可直接用于数值计算</p>
+<p>综上所述：不建议使用for…in遍历数组！</p>
+<p>for of<br>表达式一般如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(a of 对象)&#123;</span><br><span class="line">   表达式1；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>看着和for…in很像，但是此处的a是对象中的value(值)。</p>
+<p>for…of 专注于遍历的 value 值的同时，不会发生原型对象，和对象本身的属性被遍历出来的问题。同样是for…in的例子，它不会遍历出meMethod的值。</p>
+<p>for…of相比于for…in更适合遍历数组</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/11/前端知识顺理/" data-id="cjtcu2kpm0002fshqlp0lh5fg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/11/前端知识顺理/" data-id="cjtekqp3d0001ighqmd03dwse" class="article-share-link">Share</a>
       
       
     </footer>
@@ -256,9 +265,7 @@
     </div>
     <nav id="mobile-nav">
   
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+    <a href="/" class="mobile-nav-link">首页</a>
   
 </nav>
     
